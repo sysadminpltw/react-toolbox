@@ -26,7 +26,7 @@ const factory = Radio => {
         input: PropTypes.string,
         text: PropTypes.string,
       }),
-      value: PropTypes.string,
+      value: _propTypes2.default.oneOfType([ _propTypes2.default.string, _propTypes2.default.number, _propTypes2.default.bool]),
     };
 
     static defaultProps = {
