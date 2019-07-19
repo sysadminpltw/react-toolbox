@@ -55,6 +55,7 @@ const factory = Drawer => {
       'xxxl',
     ]),
     pinned: PropTypes.bool,
+    right: PropTypes.bool,
     theme: PropTypes.shape({
       clipped: PropTypes.string,
       pinned: PropTypes.string,
