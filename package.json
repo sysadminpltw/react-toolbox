@@ -1,29 +1,17 @@
 {
   "name": "react-toolbox",
   "description": "A set of React components implementing Google's Material Design specification with the power of CSS Modules.",
+  "homepage": "http://www.react-toolbox.com",
+  "version": "react16-custom",
   "main": "./lib",
-  "version": "2.0.0-beta.12",
-  "scripts": {
-    "bootstrap": "make bootstrap",
-    "clean": "make clean-all",
-    "lint:staged": "lint-staged",
-    "lint": "make lint",
-    "prettier": "make prettier",
-    "test": "make test",
-    "test:watch": "make test-watch"
-  },
   "author": {
-    "email": "javier.velasco86@gmail.com",
     "name": "Javier Velasco Arjona",
+    "email": "javier.velasco86@gmail.com",
     "url": "http://javivelasco.com/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sysadminpltw/react-toolbox.git"
-  },
-  "bugs": {
-    "email": "javier.velasco86@gmail.com",
-    "url": "https://github.com/react-toolbox/react-toolbox/issues"
   },
   "keywords": [
     "components",
@@ -32,125 +20,30 @@
     "react-component",
     "toolkit"
   ],
-  "license": "MIT",
-  "devDependencies": {
-    "@types/date-fns": "^2.6.0",
-    "@types/jest": "^19.2.3",
-    "@types/ramda": "^0.0.10",
-    "@types/react": "^15.0.24",
-    "@types/react-native": "^0.44.2",
-    "babel-core": "^6.24.1",
-    "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.0.0",
-    "babel-plugin-react-transform": "^2.0.2",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "caniuse-db": "1.0.30000670",
-    "css-loader": "^0.28.1",
-    "enzyme": "^2.8.2",
-    "enzyme-to-json": "^1.5.1",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.0.1",
-    "eslint-import-resolver-webpack": "^0.8.1",
-    "eslint-plugin-babel": "^4.1.1",
-    "eslint-plugin-compat": "^1.0.2",
-    "eslint-plugin-import": "^2.3.0",
-    "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-react": "^7.0.1",
-    "express": "^4.15.3",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-postcss": "^7.0.0",
-    "gulp-rimraf": "^0.2.1",
-    "html-webpack-plugin": "^2.28.0",
-    "identity-obj-proxy": "^3.0.0",
-    "internal-ip": "^1.2.0",
-    "jest": "^20.0.4",
-    "lerna": "^2.0.0-rc.4",
-    "lint-staged": "^3.4.2",
-    "postcss-apply": "^0.7.0",
-    "normalize.css": "^7.0.0",
-    "postcss-cssnext": "^2.11.0",
-    "postcss-each": "^0.10.0",
-    "postcss-import": "^10.0.0",
-    "postcss-loader": "^2.0.5",
-    "postcss-mixins": "^6.0.0",
-    "postcss-nesting": "^4.0.1",
-    "postcss-reporter": "^3.0.0",
-    "pre-commit": "^1.2.2",
-    "prettier": "^1.3.1",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production gulp",
+    "clean": "rimraf ./lib",
+    "prepublish": "yarn run build"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "core-js": "^2.4.0",
+    "ramda": "^0.23.0",
+    "react-css-themr": "^2.1.2",
+    "react-style-proptype": "^3.0.0",
+    "react-transition-group": "^1.1.3"
+  },
+  "peerDependencies": {
+    "classnames": "^2.2.0",
     "prop-types": "^15.5.7",
-    "react": "^15.4.2",
-    "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-test-renderer": "^15.4.2",
-    "react-transform-catch-errors": "^1.0.2",
-    "react-transform-hmr": "^1.0.4",
-    "redbox-react": "^1.3.6",
-    "style-loader": "^0.18.1",
-    "stylelint": "^7.10.1",
-    "stylelint-config-standard": "^16.0.0",
-    "stylelint-order": "^0.4.4",
-    "tslint": "^5.2.0",
-    "typescript": "^2.3.2",
-    "webpack": "^2.6.0",
-    "webpack-dev-middleware": "^1.10.2",
-    "webpack-hot-middleware": "^2.18.0"
+    "react": "^15.5.0",
+    "react-dom": "^15.5.0",
+    "react-transition-group": "^1.1.3"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-0",
-      "react"
-    ]
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "cross-env": "^5.0.0",
+    "gulp": "^3.9.1"
   },
-  "engines": {
-    "node": ">= 6"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "roots": [
-      "<rootDir>/packages/react-toolbox",
-      "<rootDir>/packages/react-toolbox-core",
-      "<rootDir>/packages/react-toolbox-css",
-      "<rootDir>/packages/react-toolbox-themr"
-    ],
-    "modulePathIgnorePatterns": [
-      "packages/.*/lib"
-    ],
-    "testPathIgnorePatterns": [
-      "lib"
-    ],
-    "moduleDirectories": [
-      "node_modules"
-    ],
-    "moduleNameMapper": {
-      "(\\.css$)|(normalize.css/normalize)|(^exports-loader)": "identity-obj-proxy"
-    },
-    "setupFiles": [
-      "./jest.setup.js"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "transform": {
-      "^.+\\.(js)": "<rootDir>/transformers/babel.js",
-      "^.+\\.(ts|tsx)$": "<rootDir>/transformers/typescript.js"
-    }
-  },
-  "pre-commit": "lint:staged",
-  "lint-staged": {
-    "*.js": [
-      "yarn run prettier",
-      "git add"
-    ]
-  }
+  "license": "MIT"
 }
