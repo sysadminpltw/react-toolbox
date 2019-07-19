@@ -44,7 +44,9 @@ class Face extends Component {
   }
 
   renderNumber = (number, idx) => {
-    const { active, radius, spacing, theme, twoDigits } = this.props;
+    const {
+      active, radius, spacing, theme, twoDigits,
+    } = this.props;
     return (
       <span
         className={classnames(theme.number, {
