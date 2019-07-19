@@ -3,7 +3,7 @@
   "description": "A set of React components implementing Google's Material Design specification with the power of CSS Modules.",
   "homepage": "http://www.react-toolbox.com",
   "version": "react16-custom",
-  "main": "./lib",
+  "main": ".",
   "author": {
     "name": "Javier Velasco Arjona",
     "email": "javier.velasco86@gmail.com",
